@@ -1,13 +1,6 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package com.mycompany.inheritance;
 
-/**
- *
- * @author PROXD
- */
+
 public class BaseEmployee extends Employee{
     private int baseSalary;
     
@@ -25,7 +18,7 @@ public class BaseEmployee extends Employee{
         this.baseSalary = baseSalary;
     }
     
-    public int setBaseSalary(){
+    public int getBaseSalary(){
         return this.baseSalary;
     }
 }
