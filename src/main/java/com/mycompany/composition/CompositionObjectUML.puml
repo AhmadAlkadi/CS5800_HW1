@@ -1,0 +1,26 @@
+@startuml
+object "<u>file: File" as Files{
+    htaccessFile = ".htaccess"
+    htrouterPhpFile = ".htrouter.php"
+    indexFile = ".index.html"
+}
+
+object "<u>folder: Folder" as Folders {
+    demo1Folder = "demo1"
+    sourceFilesFolder = "Source Files"
+    phalconFolder = ".phalcon"
+    appFolder = "app"
+    configFolder = "config"
+    controllersFolder = "controllers"
+    libraryFolder = "library"
+    migrationsFolder = "migrations"
+    modelsFolder = "models"
+    viewsFolder = "views"
+    cacheFolder = "cache");
+    publicFolder = "public"
+    includePathFolder = "Include Path"
+    RemoteFilesFolder = "Remote Files"
+}
+
+Folders *-- Files : composition
+@enduml

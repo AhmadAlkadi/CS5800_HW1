@@ -1,0 +1,28 @@
+@startuml
+class File{
+    -String fileName    
+    +File()    
+    +File(String fileName)    
+    +void setFileName(String fileName)    
+    +String getFileName()    
+    +void print()
+}
+
+class Folder {
+    -String folderName;
+    -Folder mainFolder
+    -ArrayList<Folder> subFolder
+    -ArrayList<File> files
+    +Folder()    
+    +Folder(String folderName)    
+    +void addSubFolder(Folder newFolder)    
+    +void addSubFile(File newFile)    
+    +String getFolderName()    
+    +void deleteFolder(Folder folder)    
+    +void deleteFile(File file)    
+    +void print()    
+    +void subPrint(int  numOfIndent)
+}
+
+Folder *-- File : composition
+@enduml

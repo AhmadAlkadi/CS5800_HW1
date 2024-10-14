@@ -1,0 +1,21 @@
+@startuml
+
+object "<u>ship: Ship" as ships{
+    shipName = "SF Ammonia"
+    shipYear = "1929"
+    shipNameTwo = "AIDAblu"
+    shipYearTwo = "2010"
+    shipNameThree = "Banglar Samriddhi"
+    shipYearThree = "2018"
+}
+
+object "<u>cruiseShip: CruiseShip" as cruiseShips {
+    maxNumOfPass = 71304
+}
+
+object "<u>cargoShip: CargoShip" as cargoShips{
+    cargoCap = 38894
+}
+cruiseShips --|>ships
+cargoShips --|> ships
+@enduml

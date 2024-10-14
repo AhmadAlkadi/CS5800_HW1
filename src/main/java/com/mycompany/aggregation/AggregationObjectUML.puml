@@ -1,0 +1,28 @@
+@startuml
+object "<u>instructor: Instructor" as Instructors{
+    firstNameOne = "Nima"
+    lastNameOne = "Davarpanah"
+    firstNameTwo = "Hao"
+    lastNameTwo = "Ji"
+    firstNameThree = "Tony"
+    lastNameThree = "Diaz"
+}
+
+object "<u>textbook: Textbook" as Textbooks {
+    titleOne = "Clean Code"
+    authorOne = "Robert C. Martin Series"
+    titleTwo = "Programming Massively Parallel Processors: A Hands-on Approach, 4th Edition"
+    authorTwo = "Wen-mei W. Hwu, David B. Kirk, Izzat El Hajj"
+    titleThree = "Introduction to Game Design, Prototyping, and Development: From Concept to Playable Game with Unity and C#"
+    authorThree = "Jeremy Gibson Bond"
+}
+
+object "<u>course: Course" as Courses{
+    courseNameOne = "Advanced Software Engineering"
+    courseNameTwo = "GPU Computing"
+    courseNameThree = "Game Development"
+}
+
+Courses o-- Textbooks : aggregation
+Courses o-- Instructors : aggregation
+@enduml

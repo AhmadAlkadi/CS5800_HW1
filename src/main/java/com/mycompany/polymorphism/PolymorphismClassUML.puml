@@ -1,0 +1,31 @@
+@startuml
+class Ship {
+    -String shipName
+    -String shipYear
+    +Ship()
+    +Ship(String shipName, String shipYear)
+    +void setShipName(String shipName)
+    +void setShipYear(String shipYear)
+    +String getShipName()
+    +String getShipYear()
+    +void printShip()
+}
+
+class CruiseShip extends Ship{
+    -int maxNumOfPass
+    +CruiseShip()
+    +CruiseShip(String shipName, String shipYear, int maxNumOfPass)
+    +void setMaxNumOfPass(int maxNumOfPass)
+    +int getMaxNumOfPass()
+    {method} +void printShip()
+}
+
+class CargoShip extends Ship{
+    -int cargoCap
+    +CargoShip()
+    +CargoShip(String shipName, String shipYear, int cargoCap)
+    +void setCargoCap(int cargoCap)
+    +int getCargoCap()
+    {method} +void printShip()
+}
+@enduml

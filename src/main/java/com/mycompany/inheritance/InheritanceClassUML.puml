@@ -1,0 +1,46 @@
+@startuml
+class Employee{
+    -String firstName
+    -String lastName
+    -String socialSecurityNumber
+    +Employee()
+    +Employee(String firstName,String lastName,String socialSecurityNumber)
+    +void setFirstName(String firstName)
+    +void setLastName(String lastName)
+    +void setSSN(String socialSecurityNumber)
+    +String getFirstName()
+    +String getLastName()
+    +String getSSN()
+}
+
+class SalariedEmployee extends Employee{
+    -int weeklySalary
+    +SalariedEmployee()
+    +SalariedEmployee(String firstName,String lastName,String socialSecurityNumber, int weeklySalary)
+    +void setWeeklySalary(int weeklySalary)
+    +int getWeeklySalary()
+}
+
+class HourlyEmployee extends Employee{
+    -int wage
+    -int numHoursWorked
+    +HourlyEmployee()
+    +HourlyEmployee(String firstName,String lastName,String socialSecurityNumber, int wage, int numHoursWorked)
+    +void setWage(int wage)
+    +void setNumHoursWorked(int numHoursWorked)
+    +int getWage()
+    +int getNumHoursWorked()
+}
+
+class CommisionEmployee extends Employee{
+    -int comRate
+    -int grossSales
+    +CommisionEmployee()
+    +CommisionEmployee(String firstName,String lastName,String socialSecurityNumber, int comRate, int grossSales)
+    +void setComRate(int comRate)
+    +void setGrossSales(int grossSales)
+    +int getComRate()
+    +int getGrossSales()
+}
+
+@enduml

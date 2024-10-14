@@ -1,0 +1,54 @@
+@startuml
+class Instructor{
+    -String firstName
+    -String lastName
+    -int officeNumber    
+    -Instructor()    
+    -Instructor(String firstName, String lastName, int officeNumber)    
+    -void setFirstName(String firstName)    
+    -void setLastName(String lastName)    
+    -void setOfficeNumber(int officeNumber)    
+    -String getFirstName()    
+    -String getLastName()    
+    -int getOfficeNumber()
+}
+
+class Textbook{
+    -String title
+    -String author
+    -String publisher   
+    -Textbook()    
+    -Textbook(String title, String author, String publisher)    
+    -void setTitle(String title)    
+    -void setAuthor(String author)    
+    -setPublisher(String publisher)    
+    -String getTitle()
+    -String getAuthor()
+    -String getPublisher()
+}
+
+class Course {
+    -String courseName
+    -Instructor copyInstructor
+    -Textbook copyTextbook
+    + Course()    
+    + void setFirstName(String firstName)    
+    +void setLastName(String lastName)    
+    +void setOfficeNumber(int officeNumber)    
+    +void setTitle(String title)    
+    +void setAuthor(String author)    
+    +void setPublisher(String publisher)    
+    +void setCourseName(String courseName)    
+    +String getFirstName()    
+    +String getLastName()    
+    +int getOfficeNumber()    
+    +String getTitle()    
+    +String getAuthor()    
+    +String getPublisher()
+    +String getCourseName()    
+    +void print()
+}
+
+Course o-- Textbook : aggregation
+Course o-- Instructor : aggregation
+@enduml
